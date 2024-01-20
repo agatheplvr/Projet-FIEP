@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./views/MainPage";
 import MoviePage from "./views/MoviePage";
+import RegistrationPage from './views/RegistrationPage'
+import DashboardPage from './views/DashboardPage'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -12,6 +14,8 @@ export default function App() {
       <Header></Header>
       <Router>
         <Routes>
+          <Route path="/login" element={<RegistrationPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/movie/:id" element={<MoviePage />}></Route>
         </Routes>
