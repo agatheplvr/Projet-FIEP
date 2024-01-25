@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./views/MainPage";
-import MoviePage from "./views/MoviePage";
-import RegistrationPage from './views/RegistrationPage'
-import DashboardPage from './views/DashboardPage'
+// import MoviePage from "./views/MoviePage";
+import RegistrationMenteePage from './views/RegistrationMenteePage'
+import DashboardMenteePage from './views/DashboardMenteePage'
+import RegistrationMentorPage from './views/RegistrationMentorPage'
+import DashboardMentorPage from './views/DashboardMentorPage'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -14,10 +16,12 @@ export default function App() {
       <Header></Header>
       <Router>
         <Routes>
-          <Route path="/login" element={<RegistrationPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/login-mentee" element={<RegistrationMenteePage />} />
+          <Route path="/dashboard-mentee" element={<DashboardMenteePage />} />
+          <Route path="/login-mentor" element={<RegistrationMentorPage />} />
+          <Route path="/dashboard-mentor" element={<DashboardMentorPage />} />
           <Route path="/" element={<MainPage />} />
-          <Route path="/movie/:id" element={<MoviePage />}></Route>
+          {/* <Route path="/movie/:id" element={<MoviePage />}></Route> */}
         </Routes>
       </Router>
       <Footer></Footer>

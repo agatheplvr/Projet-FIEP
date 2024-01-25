@@ -14,8 +14,8 @@ export default function Header() {
 
 const HeaderContainer = styled.div`
   width: 100%;
-  background-color: #2d3436;
-  color: white;
+  background-color: #dee5e8;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;

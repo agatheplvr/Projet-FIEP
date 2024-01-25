@@ -214,7 +214,7 @@ const RegistrationForm = () => {
 
         <div>
           <button type="submit">
-            <Link to="/dashboard">Register</Link>
+            <Link to="/dashboard-mentee">Register</Link>
             </button>
         </div>
       </form>

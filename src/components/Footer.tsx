@@ -28,7 +28,7 @@ const FooterLink = styled.a`
 
 const FooterContainer = styled.div`
   width: 100%;
-  background-color: #2d3436;
+  background-color: #dee5e8;
   color: white;
   display: flex;
   align-items: center;
