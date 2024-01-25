@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../assets/logo.png";
 
 export default function Header() {
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <h2>The Movie App</h2>
+        <h2>Let's find your MENTOR !</h2>
       </HeaderWrapper>
     </HeaderContainer>
   );

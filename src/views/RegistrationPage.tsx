@@ -12,6 +12,8 @@ const RegistrationForm = () => {
     currentGeographicZone: '',
     wishedGeographicZone: '',
     field: '',
+    aim:'',
+    personality: '',
   });
 
   const handleChange = (e) => {
@@ -124,12 +126,91 @@ const RegistrationForm = () => {
             required
           >
             <option value="" disabled selected></option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="England">England</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Singapore">Singapore</option>
             <option value="Canada">Canada</option>
+            <option value="United States of America">United States of America</option>
             {/* Add other options for current geographic zone */}
           </select>
         </div>
 
         {/* Repeat similar structure for wished geographic zone and field */}
+
+        <div>
+          <label htmlFor="wishedGeographicZone">Geographic zone (wished):</label>
+          <select
+            id="wishedGeographicZone"
+            name="wishedGeographicZone"
+            value={formData.wishedGeographicZone}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled selected></option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="England">England</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Canada">Canada</option>
+            <option value="United States of America">United States of America</option>
+            {/* Add other options for current geographic zone */}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="field">Field :</label>
+          <select
+            id="field"
+            name="field"
+            value={formData.field}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled selected></option>
+            <option value="Mergers and Acquisition">Mergers and Acquisition</option>
+            <option value="Trading">Trading</option>
+            <option value="Analyst">Analyst</option>
+            <option value="Sales">Sales</option>
+            <option value="Private Equity">Private Equity</option>
+            <option value="Audit">Audit</option>
+            <option value="Consultant">Consultant</option>
+            {/* Add other options for current geographic zone */}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="aim">What are you looking for ?</label>
+          <select
+            id="aim"
+            name="aim"
+            value={formData.aim}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled selected></option>
+            <option value="Interview Advices">Interview Advices</option>
+            <option value="Guidance">Guidance</option>
+            <option value="General Questions">General Questions</option>
+            {/* Add other options for current geographic zone */}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="personality">A few words about yourself:</label>
+          <input
+            type="personality"
+            id="personality"
+            name="personality"
+            value={formData.personality}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
         <div>
           <button type="submit">
