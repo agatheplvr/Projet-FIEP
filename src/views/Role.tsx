@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import './role.css'; // Import the CSS file here
 
 const Role = () => {
   return (
     <div>
-      <button type="button">
+      <button className="buttonStyleMentor" type="button">
         <Link to="/login-mentor">MENTOR</Link>
       </button>
 
-      <button type="button">
+      <button className="buttonStyleMentee" type="button">
         <Link to="/login-mentee">MENTEE</Link>
       </button>
     </div>

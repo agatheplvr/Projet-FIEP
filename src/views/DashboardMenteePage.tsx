@@ -55,12 +55,6 @@ const MentorApp = () => {
       <img src={logoImage} alt="Logo" />
       <div className="profiles">
         {profiles.map((profile, index) => {
-          // const swipeHandlers = useSwipeable({
-          //   onSwipedLeft: () => handleSwipeLeft(index),
-          //   onSwipedRight: () => handleSwipeRight(index),
-          //   // preventDefaultTouchmoveEvent: true,
-          //   trackMouse: true
-          // });
 
           return (
             // <div key={index} {...swipeHandlers} className="profile">

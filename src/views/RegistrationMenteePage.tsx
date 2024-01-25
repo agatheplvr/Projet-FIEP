@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import './YourComponent.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
+// import './../registration.css';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -213,7 +214,7 @@ const RegistrationForm = () => {
         </div>
 
         <div>
-          <button type="submit">
+          <button className="buttonSubmit" type="submit">
             <Link to="/dashboard-mentee">Register</Link>
             </button>
         </div>
