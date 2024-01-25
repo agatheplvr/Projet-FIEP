@@ -9,6 +9,7 @@ import RegistrationMentorPage from './views/RegistrationMentorPage'
 import DashboardMentorPage from './views/DashboardMentorPage'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Role from "./views/Role";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Header></Header>
       <Router>
         <Routes>
+          <Route path="/role" element={<Role />} />
           <Route path="/login-mentee" element={<RegistrationMenteePage />} />
           <Route path="/dashboard-mentee" element={<DashboardMenteePage />} />
           <Route path="/login-mentor" element={<RegistrationMentorPage />} />
