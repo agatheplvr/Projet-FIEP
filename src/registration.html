@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="dob">Date of Birth (dd/mm/yyyy):</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="notSpecified" name="gender" value="notSpecified" required>
+            <label for="notSpecified">Not Specified</label><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required><br><br>
+
+            <label for="currentGeographicZone">Geographic zone (current):</label>
+            <select id="currentGeographicZone" name="currentGeographicZone" required>
+                <option value="">Please select</option>
+                <option value="France">France</option>
+                <option value="England">England</option>
+                <option value="Germany">Germany</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Switzerland">Switzerland</option>
+            </select><br><br>
+
+            <label for="wishedGeographicZone">Geographic zone (wished):<span id="wishedGeographicZoneNumber"></span></label>
+            <select id="wishedGeographicZone" name="wishedGeographicZone" required>
+                <option value="">Please select</option>
+                <option value="France">France</option>
+                <option value="England">England</option>
+                <option value="Germany">Germany</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Switzerland">Switzerland</option>
+            </select><br><br>
+
+            <label for="field">Field:<span id="fieldNumber"></span></label>
+            <select id="field" name="field" required>
+                <option value="">Please select</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Consultant">Consultant</option>
+                <option value="Trader">Trader</option>
+                <option value="Sales">Sales</option>
+            </select><br><br>
+
+            <label for="interest">What are you interested in:<span id="interestNumber"></span></label>
+            <select id="interest" name="interest" required>
+                <option value="">Please select</option>
+                <option value="Sport">Sport</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Books">Books</option>
+            </select><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let lastFieldNumber = null;
+
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function setRandomNumber(labelId, category) {
+                var label = document.getElementById(labelId);
+                if (label) {
+                    let randomNumber;
+		    if (category == 'wishedGeographicZone'){
+			randomNumber = getRandomNumber(20,1000);
+			lastFieldNumber = randomNumber;
+                    } else if (category === 'field' && lastFieldNumber !== null) {
+                        randomNumber = getRandomNumber(20, lastFieldNumber - 1);
+			lastFieldNumber = randomNumber;
+                    } else {
+                        // Handles 'interest' or any other category
+                        randomNumber = getRandomNumber(20, lastFieldNumber - 1);
+                    }
+                    label.textContent = ` (${randomNumber})`;
+                }
+            }
+
+            var selects = document.querySelectorAll('select');
+
+            selects.forEach(function(select) {
+                select.addEventListener('change', function() {
+                    if (select.value !== "") {
+                        const labelId = select.name + 'Number';
+                        const category = select.name;
+                        setRandomNumber(labelId, category);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

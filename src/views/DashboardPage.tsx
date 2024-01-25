@@ -6,8 +6,8 @@ import logoImage from './../assets/logo-mentor.jpg';
 import Pass from './../assets/pass.png';
 import Like from './../assets/like.png';
 
-import Pdp1 from './../assets/silhouette.png';
-import Pdp2 from './../assets/silhouette.png';
+import Pdp1 from './../assets/silouhette.png';
+import Pdp2 from './../assets/silouhette.png';
 import Pdp3 from './../assets/silouhette.png';
 import { setupDragAndDrop } from './../utils/main.js'
 
