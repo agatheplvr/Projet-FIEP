@@ -5,10 +5,10 @@ import './../newstyle.css';
 import logoImage from './../assets/logo-mentor.jpg';
 import Pass from './../assets/pass.png';
 import Like from './../assets/like.png';
-//@ts-ignore
-import Pdp1 from './../assets/profil.jpg';
-import Pdp2 from './../assets/1.png';
-import Pdp3 from './../assets/3.png';
+
+import Pdp1 from './../assets/silhouette.png';
+import Pdp2 from './../assets/silhouette.png';
+import Pdp3 from './../assets/silouhette.png';
 import { setupDragAndDrop } from './../utils/main.js'
 
 const MentorApp = () => {
@@ -17,19 +17,19 @@ const MentorApp = () => {
       name: 'Carl',
       age: 'M&A Consultant',
       description: 'I have been working in the M&A industry for 15 years but also have strong knowledge about Private Equity.',
-      image: Pdp,
+      image: Pdp1,
     },
     {
       name: 'Sabrina',
       age: 'Junior M&A Consultant',
       description: 'I graduated 2 years ago and would be more than happy to help you in your journey in finance.',
-      image: Pdp,
+      image: Pdp2,
     },
     {
       name: 'Paul',
       age: 'M&A VP',
       description: 'After working in this field for 40 years, I am very interested in sharing my experience with younger generations and so get to know you! (Bonus if you like BasketBall)',
-      image: Pdp,
+      image: Pdp3,
     },
   ];
 
