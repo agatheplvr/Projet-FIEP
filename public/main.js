@@ -5,10 +5,8 @@ const smooth = 0.3;
 const threshold = 42;
 const thresholdMatch = 150;
 profiles.forEach(setupDragAndDrop);
-// import Hammer from 'hammerjs';
-const Hammer = require('./hammer.min.js')
 
-export function setupDragAndDrop(profile) {
+function setupDragAndDrop(profile) {
   const hammertime = new Hammer(profile);
 
   hammertime.on('pan', function (e) {
