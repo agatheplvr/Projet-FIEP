@@ -11,22 +11,21 @@ import HammerJS from 'hammerjs'; // Renamed to avoid conflicts
 const MentorApp = () => {
   const profiles = [
     {
-      name: 'Agathe',
-      age: 20,
-      description: 'I want to know what is M&A concretely',
+      name: 'Carl',
+      age: 'M&A Consultant',
+      description: 'I have been working in the M&A industry for 15 years but also have strong knowledge about Private Equity.',
       image: Pdp,
     },
     {
-      name: 'Yuming',
-      age: 20,
-      description: 'I want advice for a successful internship interview',
+      name: 'Sabrina',
+      age: 'Junior M&A Consultant',
+      description: 'I graduated 2 years ago and would be more than happy to help you in your journey in finance.',
       image: Pdp,
     },
     {
-      name: 'Capucine',
-      age: 20,
-      description:
-        'I am a student at the Goethe Uni.\nI am looking for a mentor to answer my questions about the job of a financial analyst.\nIndeed, I am interested in data analytics and I want to discover how it is applied to finance.',
+      name: 'Paul',
+      age: 'M&A VP',
+      description: 'After working in this field for 40 years, I am very interested in sharing my experience with younger generations and so get to know you! (Bonus if you like BasketBall)',
       image: Pdp,
     },
   ];

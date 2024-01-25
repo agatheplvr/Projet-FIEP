@@ -1,19 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import logoWhite from "../assets/logo-white.png";
+import logoWhite from "../assets/logo.png";
 
 export default function Footer() {
   return (
     <FooterContainer>
       <div>
-        <FooterLink>Youtube</FooterLink>
+        <FooterLink>Instagram</FooterLink>
+        <FooterLink>X</FooterLink>
         <FooterLink>LinkedIn</FooterLink>
-        <FooterLink>Website</FooterLink>
-        <FooterLink>Dev.to</FooterLink>
-        <FooterLink>Medium</FooterLink>
       </div>
-      <FooterLogo src={logoWhite}></FooterLogo>© 1990-{new Date().getFullYear()}{" "}
-      by theSeniorDev.com
+      <FooterLogo src={logoWhite}></FooterLogo>© 2023-{new Date().getFullYear()}{" "}
     </FooterContainer>
   );
 }
